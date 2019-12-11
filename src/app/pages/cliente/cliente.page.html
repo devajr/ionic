@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+        <ion-button color="light" (click)="goBack()">
+           Voltar
+          </ion-button>
+        <ion-title>Clientes</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let cliente of clientes">
+        <h2>{{ cliente.nome }}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-fab class="btn-shadow" style="position: absolute;right:5%; bottom: 5px; z-index: 999;">
+    <ion-fab-button type="ios" color="secondary">
+      <ion-button color="secondary" (click)="addCliente()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+</ion-content>

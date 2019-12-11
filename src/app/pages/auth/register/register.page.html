@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button color="light" (click)="dismissRegister()">Voltar</ion-button>
+    <ion-title>Cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+    <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" ngModel name="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmação de senha</ion-label>
+      <ion-input type="password" ngModel name="c_password"></ion-input>
+    </ion-item>
+  
+    <ion-button type="submit" expand="full" color="success">Salvar</ion-button>
+  </form>
+  <p text-center>Já tem conta ?</p>
+  <ion-button expand="full" color="primary" (click)="loginModal()">Login</ion-button>
+</ion-content>  
